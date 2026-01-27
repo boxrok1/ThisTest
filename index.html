@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Portfolio</title>
+  <meta name="description" content="Personal portfolio showcasing skills, projects, and experience." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, var(--bg), var(--bg-soft));
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    header {
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    header h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0.75rem auto 1.5rem;
+    }
+
+    .cta {
+      display: inline-flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      padding: 0.65rem 1.1rem;
+      border-radius: 999px;
+      font-weight: 500;
+      background: var(--accent);
+      color: #020617;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid #1e293b;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(56,189,248,0.25);
+      opacity: 0.95;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 3.5rem 1.5rem;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #020617, #020617cc);
+      border: 1px solid #020617;
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      margin-bottom: 0.4rem;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: #020617;
+      border: 1px solid #020617;
+      color: var(--muted);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .skill {
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: #020617;
+      border: 1px solid #020617;
+      font-size: 0.85rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem 3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Your Name</h1>
+    <p>
+      Security Researcher • Bug Bounty Hunter • Web & API Specialist
+    </p>
+    <div class="cta">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn secondary">Contact Me</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="color: var(--muted); max-width: 850px;">
+      I’m a passionate security researcher and developer who enjoys finding critical business logic flaws, API issues, and authorization bypasses in real-world applications. I focus on impactful vulnerabilities with clear security and financial implications.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects & Findings</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Business Logic Vulnerability Research</h3>
+        <p>
+          Identified plan-bypass and subscription enforcement issues in large SaaS platforms.
+        </p>
+        <div class="tags">
+          <span class="tag">Business Logic</span>
+          <span class="tag">Authorization</span>
+          <span class="tag">API</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>API Security Testing</h3>
+        <p>
+          Deep testing of REST & GraphQL APIs for privilege escalation and improper access controls.
+        </p>
+        <div class="tags">
+          <span class="tag">REST</span>
+          <span class="tag">GraphQL</span>
+          <span class="tag">IDOR</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Web Application Pentesting</h3>
+        <p>
+          Manual testing focused on real attack scenarios rather than automated scans.
+        </p>
+        <div class="tags">
+          <span class="tag">Web</span>
+          <span class="tag">Auth Bypass</span>
+          <span class="tag">Logic Bugs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span class="skill">Business Logic Testing</span>
+      <span class="skill">Authorization & RBAC</span>
+      <span class="skill">API Security</span>
+      <span class="skill">Bug Bounty</span>
+      <span class="skill">OWASP Top 10</span>
+      <span class="skill">HTTP / JSON / GraphQL</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="color: var(--muted); margin-bottom: 1rem;">
+      Want to collaborate or discuss security research?
+    </p>
+    <p>
+      Email: <a href="mailto:youremail@example.com">youremail@example.com</a><br />
+      GitHub: <a href="#">github.com/yourusername</a><br />
+      LinkedIn: <a href="#">linkedin.com/in/yourprofile</a>
+    </p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Your Name. Built with ❤️
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
