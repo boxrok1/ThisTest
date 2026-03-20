@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>Simple Form V1</h1>
+      <h1>Simple Form V2</h1>
 
       <form onSubmit={handleSubmit}>
         <input
